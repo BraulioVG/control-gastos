@@ -7,6 +7,12 @@ function App() {
   const [presupuesto, setPresupuesto] = useState(0);
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(false)
 
+  const [modal, setModal] = useState(false)
+
+  const handleNuevoGasto = () => {
+    setModal(true)
+  }
+
   return (
     <div>
       <Header
@@ -27,6 +33,7 @@ function App() {
         </div>
       )}
 
+      {modal && <p>Desd modal</p> }
      
     </div>
   )
