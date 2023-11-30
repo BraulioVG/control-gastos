@@ -4,6 +4,7 @@ import ControlPresupuesto from "./ControlPresupuesto";
 
 export const Header = ({ //Props pero en forma de lista
     gastos,
+    setGastos, 
     presupuesto, 
     setPresupuesto, 
     isValidPresupuesto, 
@@ -16,7 +17,10 @@ export const Header = ({ //Props pero en forma de lista
         {isValidPresupuesto ? (
            <ControlPresupuesto
             gastos = {gastos}
+            setGastos = {setGastos}
             presupuesto = {presupuesto}
+            setPresupuesto = {setPresupuesto}
+            setIsValidPresupuesto = {setIsValidPresupuesto}
            />
         ) : (
             <NuevoPresupuesto
